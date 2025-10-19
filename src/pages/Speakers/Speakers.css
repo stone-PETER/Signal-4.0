@@ -1,0 +1,83 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+/* General styles for the component */
+.speakers-section {
+    background-color: #000;
+    color: #fff;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.wave-image {
+    width: 100%;
+    height: 150px;
+}
+
+.speakers-heading {
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 3em;
+}
+
+/* Container for speaker cards */
+.speakers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px;
+    margin-top: 20px;
+    
+}
+
+/* Individual speaker card styles */
+.speakers-card {
+    text-align: center;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 350px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* Image container for speaker cards */
+.speaker-image-container {
+    overflow: hidden;
+    border-bottom: 1px solid #333;
+    height: 310px;
+}
+
+.speaker-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.5s ease;
+}
+
+.speaker-image:hover {
+    transform: scale(1.1);
+}
+
+/* Text styles for speaker names and job titles */
+.speaker-name {
+    margin: 10px 0 5px;
+    font-size: 1.3em;
+    color: #fff;
+}
+
+.speaker-job {
+    margin: 0 0 10px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 720px) {
+    .speakers-container {
+        flex-direction: column;
+        align-content: center; 
+    }
+}

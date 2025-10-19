@@ -1,0 +1,117 @@
+#registration {
+    position: relative;
+    padding: 100px 0;
+    background: url('circuit.png');
+    background-size: auto 100%;
+    color:rgb(6, 212, 130);   
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .title
+  {
+    font-size: 2rem;
+    margin: 40px;
+  }
+  .cards {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .cards .card {
+    padding: 20px;
+    border-radius: 2rem;
+    width: 450px;
+    max-width: 50rem;
+    background: linear-gradient(145deg, #0016306a,#17467b, #012753b4);
+    height: 35  0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    box-sizing: border-box;
+  }
+  .card h3
+  {
+    font-size: 2rem;
+  }
+  .card h2 {
+    font-size: 7rem;
+    font-family: "Fira Code", monospace;
+    word-wrap: break-word;
+  }
+  
+  .card p {
+    font-size: 16px;
+  }
+  
+  .card a {
+    text-decoration: none;
+    background-color: rgb(6, 212, 130);
+    color: #012753;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px;
+    border-radius: 2rem;
+    width: 170px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .card a:hover {
+    background: #5f5cff;
+    transition: 0.5s;
+  }
+  @media (max-width: 1560px) {
+    .card h2 {
+      font-size: 5rem;
+    }
+  }
+  
+  @media (max-width: 1030px) {
+    #registration {
+      padding: 50px 0;
+    }
+  
+    .cards {
+      gap: 15px;
+    }
+  
+    .card {
+      width: 90%;
+      max-width: 350px;
+    }
+  
+    .card h2 {
+      font-size: 6rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cards .card {
+      height: 350px;
+    }
+    .card h2 {
+      font-size: 5rem;
+    }
+  }
+  
+  @media (max-width: 330px) {
+    .card h2 {
+      font-size: 4rem;
+    }
+    .cards .card {
+      height: 370px;
+    }
+    .card {
+      width: 100%;
+    }
+  }

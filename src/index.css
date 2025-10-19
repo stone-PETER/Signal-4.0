@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0a0a1a;
+  font-family: "Varela", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.section-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.section-heading {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  padding-bottom: 15px;
+  text-decoration: underline;
+}
+
+.great-vibes-regular {
+  font-family: "Great Vibes", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.verdana{
+  font-family: verdana;
+}
+
+.noto-serif {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.reg-btn-gradient {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(197, 45, 209, 1) 100%
+  );
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("/fonts/ClashDisplay-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rover Explore";
+  src: url("/fonts/rover-explore.regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
