@@ -51,7 +51,7 @@ const Hero = () => {
               <p className="text-xl text-gray-300 leading-relaxed max-w-xl text-justify">
                 SIGNAL 4.0 , the flagship event of the IEEE SPS Kerala Chapter,
                 is back with greater energy and excitement! Scheduled to take
-                place on January 24, 25, and 26, 2025, this fourth edition
+                place on January 24, 25, and 26, 2026, this fourth edition
                 promises to be a remarkable blend of technology, inspiration,
                 and collaboration.
               </p>

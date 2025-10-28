@@ -14,7 +14,7 @@ const AboutUs = () => {
         <div className="about-us-text-signal">
           <h1>SIGNAL 4.0</h1>
           <p>
-          SIGNAL 4.0 , the flagship event of the IEEE SPS Kerala Chapter in collaboration with Tkm engineering college, Kollam, is back with greater energy and excitement! Scheduled to take place on January 24, 25, and 26, 2025, this fourth edition promises to be a remarkable blend of technology, inspiration, and collaboration. This exciting three-day event is fabricated with valuable networking sessions, speaker sessions and entertaining cultural evenings. The event serves as a central hub for networking, relationship-building , educational opportunities and much more awaits to unfold - get ready for an electrifying experience like never before!
+          SIGNAL 4.0 , the flagship event of the IEEE SPS Kerala Chapter in collaboration with Tkm engineering college, Kollam, is back with greater energy and excitement! Scheduled to take place on January 24, 25, and 26, 2026, this fourth edition promises to be a remarkable blend of technology, inspiration, and collaboration. This exciting three-day event is fabricated with valuable networking sessions, speaker sessions and entertaining cultural evenings. The event serves as a central hub for networking, relationship-building , educational opportunities and much more awaits to unfold - get ready for an electrifying experience like never before!
           </p>
         </div>
       </div>
