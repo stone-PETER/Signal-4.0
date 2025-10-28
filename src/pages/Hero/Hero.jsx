@@ -2,7 +2,7 @@ import WaveAnimation from "./WaveAnimation";
 
 const Hero = () => {
   return (
-    <section className="bg-[#0a0a1a] text-white">
+    <section className="bg-[#0a0a1a] text-white pt-[10dvh]">
       <div className="relative min-h-screen  overflow-hidden">
         {/*pt-[10dvh]*/}
         <canvas
@@ -36,7 +36,7 @@ const Hero = () => {
                 {/* <img className="h-[80px]" src="sps kc png.png"></img> */}
                 <div>
                   <h2 className="md:text-xl text-center font-mono text-cyan-300 tracking-widest uppercase text-base">
-                   <i>IEEE SPS Kerala Chapter Presents</i>
+                    <i>IEEE SPS Kerala Chapter Presents</i>
                   </h2>
                 </div>
               </div>
@@ -49,7 +49,7 @@ const Hero = () => {
               </h1> */}
 
               <p className="text-xl text-gray-300 leading-relaxed max-w-xl text-justify">
-                SIGNAL 3.0 , the flagship event of the IEEE SPS Kerala Chapter,
+                SIGNAL 4.0 , the flagship event of the IEEE SPS Kerala Chapter,
                 is back with greater energy and excitement! Scheduled to take
                 place on January 24, 25, and 26, 2024, this third edition
                 promises to be a remarkable blend of technology, inspiration,
@@ -57,23 +57,25 @@ const Hero = () => {
               </p>
 
               <div className="flex items-center justify-center md:justify-start space-x-4 pt-6 ">
-                <a href="https://www.yepdesk.com/signal-3-0" target="_blank"><button className="group relative px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-green-600 hover:from-cyan-600 hover:to-green-700 transition-all duration-300 flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    className="mr-2 group-hover:animate-pulse"
-                  >
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                  Register Now
-                  <div className="absolute inset-0 rounded-full border-2 border-cyan-300/50 animate-ping group-hover:opacity-0 transition-opacity"></div>
-                </button></a>
+                <a href="#about" target="_blank">
+                  <button className="group relative px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-green-600 hover:from-cyan-600 hover:to-green-700 transition-all duration-300 flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      className="mr-2 group-hover:animate-pulse"
+                    >
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    Learn More
+                    <div className="absolute inset-0 rounded-full border-2 border-cyan-300/50 animate-ping group-hover:opacity-0 transition-opacity"></div>
+                  </button>
+                </a>
 
                 {/* <button className="border border-white/20 hover:bg-white/10 px-8 py-3 rounded-full transition-all flex items-center">
                   <svg

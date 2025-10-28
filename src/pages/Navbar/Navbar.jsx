@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="navBar">
           <div className="logo">
             <img className="h-[6dvh] px-[5px]" src="sps kc png.png" alt="Mace Logo" />
-            <img className="h-[6dvh]" src="Poonjar.png" alt="Mace Logo" />
+            {/* <img className="h-[6dvh]" src="Poonjar.png" alt="Mace Logo" /> */}
           </div>
           <FaBars
             className="bars"
@@ -41,7 +41,7 @@ export default function Navbar() {
               ABOUT US
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               href="#registration"
               onClick={() => {
@@ -50,7 +50,7 @@ export default function Navbar() {
             >
               REGISTRATION
             </a>
-          </li>
+          </li> */}
           {/* <li>
             <a
               href="#Gallery"

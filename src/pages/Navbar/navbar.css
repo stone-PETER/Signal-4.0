@@ -38,7 +38,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 10px;
+    padding-right: 10%;
 }
 .nav-bar li{
     color:rgb(6, 212, 71);    
@@ -92,6 +92,7 @@
     .nav-bar-active{
         top: 10dvh;
         opacity: 1;
+        padding-right: 0px;
     }
     .nav-bar li{
         width: 100%;

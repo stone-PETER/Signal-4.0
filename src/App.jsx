@@ -24,11 +24,11 @@ const App = () => {
               <>
       <Navbar />
       <Hero />
-      <Countdown/>
+      {/* <Countdown/> */}
       <AboutUs />
-      <Registration />
-      <Speaker />
-       <Updates/>
+      {/* <Registration /> */}
+      {/* <Speaker /> */}
+       {/* <Updates/> */}
       <Workshops /> 
       <Contact />
       <Footer />

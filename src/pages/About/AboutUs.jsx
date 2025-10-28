@@ -12,29 +12,27 @@ const AboutUs = () => {
           <img src="Signal.png" alt="Logo" />
         </div>
         <div className="about-us-text-signal">
-          <h1>SIGNAL 3.0</h1>
+          <h1>SIGNAL 4.0</h1>
           <p>
-          SIGNAL 3.0 , the flagship event of the IEEE SPS Kerala Chapter in collaboration with College of Engineering, Poonjar, is back with greater energy and excitement! Scheduled to take place on January 24, 25, and 26, 2024, this third edition promises to be a remarkable blend of technology, inspiration, and collaboration. This exciting three-day event is fabricated with valuable networking sessions, speaker sessions and entertaining cultural evenings. The event serves as a central hub for networking, relationship-building , educational opportunities and much more awaits to unfold - get ready for an electrifying experience like never before!
+          SIGNAL 4.0 , the flagship event of the IEEE SPS Kerala Chapter in collaboration with College of Engineering, Poonjar, is back with greater energy and excitement! Scheduled to take place on January 24, 25, and 26, 2024, this third edition promises to be a remarkable blend of technology, inspiration, and collaboration. This exciting three-day event is fabricated with valuable networking sessions, speaker sessions and entertaining cultural evenings. The event serves as a central hub for networking, relationship-building , educational opportunities and much more awaits to unfold - get ready for an electrifying experience like never before!
           </p>
         </div>
       </div>
 
-      <div className="about-us-content-spskerala">
+      <div className="about-us-content-spskerala ">
         <div className="about-us-logo-spskerala">
           {/* Replace the path with your logo file */}
           <img src="sps kc png.png" alt="Logo" />
         </div>
-        <div className="about-us-text-spskerala">
+        <div className="about-us-text-spskerala lg:pl-[10%]">
           <h1>SPS KERALA CHAPTER</h1>
           <p>
-          The IEEE Signal Processing Society Kerala Chapter is a lively, close-knit community, honored globally as the Best Chapter of the Year among all IEEE SPS branches worldwide. Our team includes 23 dedicated student leaders and 17 seasoned professionals—three of them VOLT graduates—all working under the guidance of an advisory body that brings clarity and direction to our vision. Together, we shape every event with purpose and creativity, striving to leave a genuine impact on this beautiful world, driven by something so uniquely human. Working hand in hand with other IEEE section chapters, we are building a network that reaches from the grassroots of Kerala to the world. Our chapter is more than a community—it’s a place where ideas flourish, people engage, and every endeavor holds a lasting purpose.
-          </p>
+The IEEE Signal Processing Society (SPS) Kerala Chapter is a thriving, close-knit group that has been named Best Chapter of the Year on a global scale. Our team, led by 23 motivated student leaders and 17 professionals, including three VOLT grads, thrives with the support of a devoted advisory board. We plan meaningful activities, encourage collaboration among Kerala's expanding SPS student clubs, and recognize accomplishments such as winning ICIP and ICASSP video competitions. With members now helping to arrange ICASSP 2025, our influence has expanded well beyond the region. Together with other IEEE chapters, we're creating a worldwide network based on local enthusiasm. More than just a chapter, we're a family where ideas thrive and every effort counts.          </p>
         </div>
       </div>
 
-      <div className="about-us-content">
+      {/* <div className="about-us-content">
         <div className="about-us-logo-cepoonjar">
-          {/* Replace the path with your logo file */}
           <img src="Poonjar.png" alt="Logo" />
         </div>
         <div className="about-us-text-cepoonjar">
@@ -43,7 +41,7 @@ const AboutUs = () => {
           The College of Engineering Poonjar (CEP) is an esteemed educational institution located in the serene environment of Poonjar, Kerala. Established in 2000, the college operates under the Co-operative Academy of Professional Education (CAPE), which is affiliated with APJ Abdul Kalam Technological University (KTU) and approved by the All India Council for Technical Education (AICTE).
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Green Wave Background with Image */}
       {/* <div className="green-wave-background inverted">
