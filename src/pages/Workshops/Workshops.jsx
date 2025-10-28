@@ -53,7 +53,7 @@ const Workshops = () => {
         <h2 className="workshop-heading">Workshops</h2>
         <span className="loader"></span>
       </div>
-      <div className="workshops">
+      {/* <div className="workshops">
      
         {workshopsData.map((workshop, index) => (
           <div key={index} className="workshop-card">
@@ -68,6 +68,11 @@ const Workshops = () => {
             </div>
           </div>
         ))}
+      </div> */}
+      <div className="flex justify-center items-center mt-8 mb-8">
+        <div className=" text-white px-6 py-4 rounded-lg shadow-lg">
+          <p className="text-lg font-semibold text-center">Will be disclosed soon</p>
+        </div>
       </div>
       <div className="wavegif">
 
