@@ -1,27 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Roboto+Condensed:wght@400;700;900&family=Bebas+Neue&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #0a0a1a;
-  font-family: "Varela", serif;
+  background-color: #0d0d0d;
   font-weight: 400;
   font-style: normal;
+  color: #c0c0c0;
 }
+
 .section-heading {
   text-align: center;
   margin-bottom: 20px;
-}
-.section-heading {
   text-transform: uppercase;
-  text-align: center;
   font-size: 2.5rem;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 900;
+  color: #ffffff;
   padding-bottom: 15px;
-  text-decoration: underline;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 3px;
+  font-family: "Bebas Neue", cursive;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #dc143c, transparent);
+  margin: 15px auto 0;
+  box-shadow: 0 0 10px rgba(220, 20, 60, 0.8);
 }
 
 .great-vibes-regular {
@@ -30,8 +40,7 @@ body {
   font-style: normal;
 }
 
-
-.verdana{
+.verdana {
   font-family: verdana;
 }
 
@@ -44,12 +53,44 @@ body {
 }
 
 .reg-btn-gradient {
-  background: rgb(0, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(197, 45, 209, 1) 100%
+  background: linear-gradient(
+    135deg,
+    rgba(13, 13, 13, 1) 0%,
+    rgba(220, 20, 60, 0.8) 50%,
+    rgba(139, 0, 0, 1) 100%
   );
+  box-shadow: 0 0 20px rgba(220, 20, 60, 0.5);
+  transition: all 0.3s ease;
+}
+
+.reg-btn-gradient:hover {
+  box-shadow: 0 0 30px rgba(220, 20, 60, 0.8);
+  transform: scale(1.05);
+}
+
+/* MCU-inspired text effects */
+.mcu-glow-text {
+  text-shadow: 0 0 10px rgba(220, 20, 60, 0.8), 0 0 20px rgba(220, 20, 60, 0.5),
+    0 0 30px rgba(220, 20, 60, 0.3);
+}
+
+.mcu-border {
+  border: 2px solid #dc143c;
+  box-shadow: 0 0 15px rgba(220, 20, 60, 0.5);
+}
+
+/* MCU Card styling */
+.mcu-card {
+  background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 2px solid #2d2d2d;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.mcu-card:hover {
+  border-color: #dc143c;
+  box-shadow: 0 0 25px rgba(220, 20, 60, 0.4);
+  transform: translateY(-5px);
 }
 
 @font-face {

@@ -1,121 +1,135 @@
 .count {
-    color: white;
-    margin-bottom: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
+  color: #c0c0c0;
+  margin-bottom: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
 }
 
 .count h2 {
-    font-size: 4rem;
-    margin: 0;
-    text-align: center;
+  font-size: 4rem;
+  margin: 0;
+  text-align: center;
+  color: #dc143c;
+  text-shadow: 0 0 20px rgba(220, 20, 60, 0.8);
+  font-weight: 900;
+  letter-spacing: 4px;
+  font-family: "Bebas Neue", cursive;
 }
 
 .count .date {
-    margin: 20px;
-    font-size: 2.5rem;
-    color: rgba(255, 255, 255, 0.6);
-    text-align: center;
+  margin: 20px;
+  font-size: 2.5rem;
+  color: #8b8b8b;
+  text-align: center;
 }
 
 .count .timer {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    color: rgb(6, 212, 130);
-    width: 100%;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: #dc143c;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
 .timer .box {
-    width: 20%;
-    min-width: 150px;
-    height: 200px;
-    background: linear-gradient(145deg, #00163038, #17467b36, #01275357);
-    padding: 20px;
-    font-size: 2.5rem;
-    border-radius: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-sizing: border-box;
+  width: 20%;
+  min-width: 150px;
+  height: 200px;
+  background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 3px solid #dc143c;
+  box-shadow: 0 0 20px rgba(220, 20, 60, 0.4);
+  padding: 20px;
+  font-size: 2.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-weight: 900;
+  text-shadow: 0 0 15px rgba(220, 20, 60, 0.5);
+}
+
+.timer .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(220, 20, 60, 0.6);
 }
 
 .box span {
-    font-size: 1.2em;
-    margin-top: 10px;
+  font-size: 1.2em;
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {
-    .timer .box {
-        width: 25%;
-        min-width: 120px;
-        height: 180px;
-        font-size: 2rem;
-        padding: 15px;
-    }
-    .count h2 {
-        font-size: 3rem;
-    }
-    .count .date {
-        font-size: 2rem;
-    }
+  .timer .box {
+    width: 25%;
+    min-width: 120px;
+    height: 180px;
+    font-size: 2rem;
+    padding: 15px;
+  }
+  .count h2 {
+    font-size: 3rem;
+  }
+  .count .date {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 576px) {
-    .timer .box {
-        width: 30%;
-        min-width: 100px;
-        height: 160px;
-        font-size: 1.8rem;
-        padding: 10px;
-    }
-    .count h2 {
-        font-size: 2.5rem;
-    }
-    .count .date {
-        font-size: 1.8rem;
-    }
+  .timer .box {
+    width: 30%;
+    min-width: 100px;
+    height: 160px;
+    font-size: 1.8rem;
+    padding: 10px;
+  }
+  .count h2 {
+    font-size: 2.5rem;
+  }
+  .count .date {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 400px) {
-    .timer .box {
-        width: 40%;
-        min-width: 80px;
-        height: 140px;
-        font-size: 1.5rem;
-    }
-    .hour .h3::before
-    {
-        content: "hr";
-    }
-    .count h2 {
-        font-size: 2rem;
-    }
-    .count .date {
-        font-size: 1.5rem;
-    }
+  .timer .box {
+    width: 40%;
+    min-width: 80px;
+    height: 140px;
+    font-size: 1.5rem;
+  }
+  .hour .h3::before {
+    content: "hr";
+  }
+  .count h2 {
+    font-size: 2rem;
+  }
+  .count .date {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 330px) {
-    .timer .box {
-        width: 40%;
-        min-width: 60px;
-        height: 140px;
-        font-size: 1rem;
-    }
-    .count h2 {
-        font-size: 2rem;
-    }
-    .count .date {
-        font-size: 1.5rem;
-    }
+  .timer .box {
+    width: 40%;
+    min-width: 60px;
+    height: 140px;
+    font-size: 1rem;
+  }
+  .count h2 {
+    font-size: 2rem;
+  }
+  .count .date {
+    font-size: 1.5rem;
+  }
 }
-

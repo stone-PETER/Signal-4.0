@@ -1,117 +1,153 @@
 #registration {
-    position: relative;
-    padding: 100px 0;
-    background: url('circuit.png');
-    background-size: auto 100%;
-    color:rgb(6, 212, 130);   
-    min-height: 100vh;
-    overflow-x: hidden;
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+  background-size: auto 100%;
+  color: #c0c0c0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.title {
+  font-size: 2.5rem;
+  margin: 40px;
+  color: #dc143c;
+  text-shadow: 0 0 20px rgba(220, 20, 60, 0.8);
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-family: "Bebas Neue", cursive;
+}
+.cards {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cards .card {
+  padding: 30px;
+  border-radius: 1rem;
+  width: 450px;
+  max-width: 50rem;
+  background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 3px solid #dc143c;
+  box-shadow: 0 0 30px rgba(220, 20, 60, 0.4);
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.cards .card::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(45deg, #dc143c, #8b0000, #dc143c);
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cards .card:hover::before {
+  opacity: 0.6;
+}
+
+.cards .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(220, 20, 60, 0.6);
+}
+
+.card h3 {
+  font-size: 2rem;
+  color: #dc143c;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.card h2 {
+  font-size: 7rem;
+  font-family: "Fira Code", monospace;
+  word-wrap: break-word;
+  color: #c0c0c0;
+  text-shadow: 0 0 15px rgba(220, 20, 60, 0.3);
+}
+
+.card p {
+  font-size: 16px;
+}
+
+.card a {
+  text-decoration: none;
+  background-color: rgb(6, 212, 130);
+  color: #012753;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 2rem;
+  width: 170px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.card a:hover {
+  background: #5f5cff;
+  transition: 0.5s;
+}
+@media (max-width: 1560px) {
+  .card h2 {
+    font-size: 5rem;
   }
-  .title
-  {
-    font-size: 2rem;
-    margin: 40px;
+}
+
+@media (max-width: 1030px) {
+  #registration {
+    padding: 50px 0;
   }
+
   .cards {
-    display: flex;
-    position: relative;
-    margin: 0 auto;
+    gap: 15px;
+  }
+
+  .card {
     width: 90%;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
+    max-width: 350px;
   }
-  
+
+  .card h2 {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
   .cards .card {
-    padding: 20px;
-    border-radius: 2rem;
-    width: 450px;
-    max-width: 50rem;
-    background: linear-gradient(145deg, #0016306a,#17467b, #012753b4);
-    height: 35  0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    box-sizing: border-box;
-  }
-  .card h3
-  {
-    font-size: 2rem;
+    height: 350px;
   }
   .card h2 {
-    font-size: 7rem;
-    font-family: "Fira Code", monospace;
-    word-wrap: break-word;
+    font-size: 5rem;
   }
-  
-  .card p {
-    font-size: 16px;
+}
+
+@media (max-width: 330px) {
+  .card h2 {
+    font-size: 4rem;
   }
-  
-  .card a {
-    text-decoration: none;
-    background-color: rgb(6, 212, 130);
-    color: #012753;
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 20px;
-    border-radius: 2rem;
-    width: 170px;
+  .cards .card {
+    height: 370px;
   }
-  
-  .card:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+  .card {
+    width: 100%;
   }
-  
-  .card a:hover {
-    background: #5f5cff;
-    transition: 0.5s;
-  }
-  @media (max-width: 1560px) {
-    .card h2 {
-      font-size: 5rem;
-    }
-  }
-  
-  @media (max-width: 1030px) {
-    #registration {
-      padding: 50px 0;
-    }
-  
-    .cards {
-      gap: 15px;
-    }
-  
-    .card {
-      width: 90%;
-      max-width: 350px;
-    }
-  
-    .card h2 {
-      font-size: 6rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .cards .card {
-      height: 350px;
-    }
-    .card h2 {
-      font-size: 5rem;
-    }
-  }
-  
-  @media (max-width: 330px) {
-    .card h2 {
-      font-size: 4rem;
-    }
-    .cards .card {
-      height: 370px;
-    }
-    .card {
-      width: 100%;
-    }
-  }
+}

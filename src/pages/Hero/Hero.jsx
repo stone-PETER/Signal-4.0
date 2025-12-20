@@ -2,63 +2,52 @@ import WaveAnimation from "./WaveAnimation";
 
 const Hero = () => {
   return (
-    <section className="bg-[#0a0a1a] text-white pt-[10dvh]">
-      <div className="relative min-h-screen  overflow-hidden">
+    <section className="bg-mcu-black text-white pt-[10dvh]">
+      <div className="relative min-h-screen overflow-hidden">
         {/*pt-[10dvh]*/}
         <canvas
           id="waveCanvas"
-          className="absolute inset-0 w-full h-full opacity-80 z-0"
+          className="absolute inset-0 w-full h-full opacity-30 z-0"
         ></canvas>
-        <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-mcu-black via-transparent to-mcu-charcoal z-10">
           <WaveAnimation />
         </div>
-        <div className="absolute z-10"></div>
+        {/* MCU-style red accent lines */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-mcu-red to-transparent z-30 shadow-[0_0_20px_rgba(220,20,60,0.8)]"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-mcu-red to-transparent z-30 shadow-[0_0_20px_rgba(220,20,60,0.8)]"></div>
 
         <div className="relative z-20 container mx-auto px-6 lg:px-12 pt-24 pb-16 lg:pl-[20%]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="flex items-center space-x-4 mb-4">
-                {/* <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="48"
-                  height="48"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  className="text-cyan-400 opacity-80"
-                >
-                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                </svg> */}
-                {/* <img className="h-[80px]" src="sps kc png.png"></img> */}
-                <div>
-                  <h2 className="md:text-xl text-center font-mono text-cyan-300 tracking-widest uppercase text-base">
+                <div className="w-full">
+                  <h2 className="md:text-xl text-center font-mono text-mcu-red tracking-[0.3em] uppercase text-base font-bold mcu-glow-text">
                     <i>IEEE SPS Kerala Chapter Presents</i>
                   </h2>
                 </div>
               </div>
-              <div>
-                <img src="Signal.png"></img>
+              <div className="relative">
+                <img
+                  src="Signal.png"
+                  className="drop-shadow-[0_0_30px_rgba(220,20,60,0.5)] transition-all duration-300 hover:drop-shadow-[0_0_50px_rgba(220,20,60,0.8)]"
+                  alt="SIGNAL 4.0"
+                />
+                {/* MCU-style corner accents */}
+                <div className="absolute -top-2 -left-2 w-8 h-8 border-l-2 border-t-2 border-mcu-red"></div>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 border-r-2 border-b-2 border-mcu-red"></div>
               </div>
 
-              {/* <h1 className="text-5xl xl:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-green-500">
-                SIGNAL 3.0
-              </h1> */}
-
-              <p className="text-xl text-gray-300 leading-relaxed max-w-xl text-justify">
-                SIGNAL 4.0 , the flagship event of the IEEE SPS Kerala Chapter,
+              <p className="text-xl text-mcu-light-gray leading-relaxed max-w-xl text-justify font-light">
+                SIGNAL 4.0, the flagship event of the IEEE SPS Kerala Chapter,
                 is back with greater energy and excitement! Scheduled to take
                 place on January 24, 25, and 26, 2026, this fourth edition
                 promises to be a remarkable blend of technology, inspiration,
                 and collaboration.
               </p>
 
-              <div className="flex items-center justify-center md:justify-start space-x-4 pt-6 ">
+              <div className="flex items-center justify-center md:justify-start space-x-4 pt-6">
                 <a href="#about" target="_blank">
-                  <button className="group relative px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-green-600 hover:from-cyan-600 hover:to-green-700 transition-all duration-300 flex items-center">
+                  <button className="group relative px-8 py-4 rounded bg-gradient-to-r from-mcu-red-dark via-mcu-red to-mcu-red-dark hover:from-mcu-red hover:via-mcu-red-light hover:to-mcu-red transition-all duration-300 flex items-center font-bold tracking-wider uppercase border-2 border-mcu-red-light shadow-[0_0_20px_rgba(220,20,60,0.5)] hover:shadow-[0_0_30px_rgba(220,20,60,0.8)]">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -73,59 +62,9 @@ const Hero = () => {
                       <polyline points="22 4 12 14.01 9 11.01"></polyline>
                     </svg>
                     Learn More
-                    <div className="absolute inset-0 rounded-full border-2 border-cyan-300/50 animate-ping group-hover:opacity-0 transition-opacity"></div>
                   </button>
                 </a>
-
-                {/* <button className="border border-white/20 hover:bg-white/10 px-8 py-3 rounded-full transition-all flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    className="mr-2"
-                  >
-                    <rect
-                      x="3"
-                      y="11"
-                      width="18"
-                      height="11"
-                      rx="2"
-                      ry="2"
-                    ></rect>
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                  </svg>
-                  Our Process
-                </button> */}
               </div>
-              {/* <div className="flex items-center space-x-4 pt-8 opacity-70">
-              <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className="text-purple-400"
-                >
-                  <rect
-                    x="3"
-                    y="11"
-                    width="18"
-                    height="11"
-                    rx="2"
-                    ry="2"
-                  ></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg>
-                <span className="text-sm font-mono">
-                  Compatible with 500+ Legacy Storage Technologies
-                </span>
-                </div> */}
             </div>
           </div>
         </div>
