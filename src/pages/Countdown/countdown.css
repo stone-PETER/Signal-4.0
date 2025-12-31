@@ -1,5 +1,5 @@
 .count {
-  color: #c0c0c0;
+  color: white;
   margin-bottom: 100px;
   width: 100%;
   display: flex;
@@ -8,15 +8,15 @@
   justify-content: center;
   padding: 20px;
   box-sizing: border-box;
-  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+  background-color: #0a0a1a;
 }
 
 .count h2 {
   font-size: 4rem;
   margin: 0;
   text-align: center;
-  color: #dc143c;
-  text-shadow: 0 0 20px rgba(220, 20, 60, 0.8);
+  color: #32cd32;
+  text-shadow: 0 0 15px rgba(50, 205, 50, 0.8);
   font-weight: 900;
   letter-spacing: 4px;
   font-family: "Bebas Neue", cursive;
@@ -25,7 +25,7 @@
 .count .date {
   margin: 20px;
   font-size: 2.5rem;
-  color: #8b8b8b;
+  color: #fff;
   text-align: center;
 }
 
@@ -33,7 +33,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  color: #dc143c;
+  color: #32cd32;
   width: 100%;
   flex-wrap: nowrap;
   justify-content: space-around;
@@ -43,9 +43,13 @@
   width: 20%;
   min-width: 150px;
   height: 200px;
-  background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
-  border: 3px solid #dc143c;
-  box-shadow: 0 0 20px rgba(220, 20, 60, 0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(30, 27, 75, 0.8) 0%,
+    rgba(10, 10, 26, 0.9) 100%
+  );
+  border: 2px solid #32cd32;
+  box-shadow: 0 0 15px rgba(50, 205, 50, 0.5);
   padding: 20px;
   font-size: 2.5rem;
   border-radius: 1rem;
@@ -57,12 +61,12 @@
   box-sizing: border-box;
   transition: all 0.3s ease;
   font-weight: 900;
-  text-shadow: 0 0 15px rgba(220, 20, 60, 0.5);
+  text-shadow: 0 0 10px rgba(50, 205, 50, 0.6);
 }
 
 .timer .box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(220, 20, 60, 0.6);
+  box-shadow: 0 0 25px rgba(50, 205, 50, 0.8);
 }
 
 .box span {

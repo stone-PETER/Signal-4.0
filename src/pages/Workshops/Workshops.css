@@ -3,7 +3,7 @@
 .workshops-container {
   text-align: center;
   position: relative;
-  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%);
+  background-color: #0a0a1a;
   font-family: "Inter", sans-serif;
   padding: 60px 20px;
 }
@@ -27,12 +27,12 @@
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  color: #ffffff;
+  color: #32cd32;
   margin-top: 20px;
   font-size: 3em;
   font-weight: 900;
   letter-spacing: 4px;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 15px rgba(50, 205, 50, 0.8);
   font-family: "Bebas Neue", cursive;
 }
 
@@ -41,28 +41,14 @@
   height: 400px;
   margin: 20px;
   perspective: 1000px;
-  border: 3px solid #dc143c;
-  box-shadow: 0 0 20px rgba(220, 20, 60, 0.4), 0 0 40px rgba(220, 20, 60, 0.2);
+  border: 2px solid #32cd32;
+  box-shadow: 0 0 15px rgba(50, 205, 50, 0.5);
   transition: all 0.6s ease;
   position: relative;
 }
 
-.workshop-card::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  background: linear-gradient(45deg, #dc143c, #8b0000, #dc143c);
-  z-index: -1;
-  filter: blur(10px);
-  opacity: 0;
-  transition: opacity 0.6s ease;
-}
-
-.workshop-card:hover::before {
-  opacity: 0.6;
+.workshop-card:hover {
+  box-shadow: 0 0 25px rgba(50, 205, 50, 0.8);
 }
 
 .workshop-card-inner {
@@ -82,8 +68,8 @@
   font-family: "Bebas Neue", cursive;
   font-weight: 900;
   letter-spacing: 2px;
-  color: #dc143c;
-  text-shadow: 0 0 15px rgba(220, 20, 60, 0.6);
+  color: #32cd32;
+  text-shadow: 0 0 10px rgba(50, 205, 50, 0.6);
 }
 
 .workshop-card-front {
@@ -94,7 +80,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
+  background: linear-gradient(135deg, #001f3f 0%, #0a0a1a 100%);
 }
 
 .workshop-card-back {

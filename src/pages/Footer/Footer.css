@@ -1,24 +1,11 @@
 /* Footer.css */
 
 footer {
-  background: linear-gradient(180deg, #0d0d0d 0%, #000000 100%);
-  border-top: 3px solid #dc143c;
-  box-shadow: 0 -5px 30px rgba(220, 20, 60, 0.3);
-  color: #8b8b8b;
+  background-color: #172238;
+  color: #fff;
   flex-direction: column;
   align-items: center;
   position: relative;
-}
-
-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #dc143c, transparent);
-  box-shadow: 0 0 15px rgba(220, 20, 60, 0.8);
 }
 .feet {
   display: flex;
@@ -49,12 +36,11 @@ footer::before {
 .useful-links h4 {
   font-size: 14px;
   font-weight: 900;
-  color: #dc143c;
+  color: #00d4ff;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
-  border-bottom: 2px solid #dc143c;
-  text-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+  border-bottom: 2px solid #00d4ff;
   letter-spacing: 2px;
 }
 .useful-links ul {
@@ -64,25 +50,25 @@ footer::before {
   padding-left: 5px;
   font-size: 17px;
   line-height: 37px;
-  color: #c0c0c0;
+  color: #fff;
   transition: all 0.3s ease;
 }
 .useful-links ul li a {
-  color: #c0c0c0;
+  color: #fff;
   font-size: 17px;
   line-height: 30px;
   transition: color 0.3s ease;
 }
 
 .useful-links ul li a:hover {
-  color: #ffffff;
+  color: #00d4ff;
 }
 
 .useful-links ul li:hover {
-  border: 2px solid #dc143c;
+  border: 2px solid #00d4ff;
   border-radius: 5px;
-  background-color: rgba(220, 20, 60, 0.15);
-  box-shadow: 0 0 15px rgba(220, 20, 60, 0.4);
+  background-color: rgba(0, 212, 255, 0.15);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
   transform: translateX(5px);
   transition: all 0.3s ease;
 }
@@ -93,11 +79,11 @@ footer::before {
 .footer-contact h4 {
   font-size: 14px;
   font-weight: 900;
-  color: #dc143c;
+  color: #00d4ff;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
-  border-bottom: 2px solid #dc143c;
+  border-bottom: 2px solid #00d4ff;
   text-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
   letter-spacing: 2px;
 }
@@ -138,27 +124,27 @@ footer::before {
 }
 
 .btn-floating {
-  color: #c0c0c0;
+  color: #fff;
   transition: all 0.3s ease;
 }
 
 .btn-floating:hover {
-  color: #dc143c;
-  text-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+  color: #00d4ff;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
 }
 
 .btn-outline-light {
-  border-color: #dc143c;
-  color: #c0c0c0;
+  border-color: #00d4ff;
+  color: #fff;
   background-color: transparent;
   transition: all 0.3s ease;
 }
 
 .btn-outline-light:hover {
-  background-color: #dc143c;
-  border-color: #dc143c;
-  color: #ffffff;
-  box-shadow: 0 0 15px rgba(220, 20, 60, 0.5);
+  background-color: #00d4ff;
+  border-color: #00d4ff;
+  color: #172238;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
 }
 .row-d-flex {
   display: flex;
