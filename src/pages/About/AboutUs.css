@@ -102,9 +102,9 @@ body {
   padding: 30px 40px;
   margin: 40px auto;
   background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
-  border: 3px solid #dc143c;
-  box-shadow: 0 0 30px rgba(220, 20, 60, 0.4),
-    inset 0 0 20px rgba(220, 20, 60, 0.1);
+  border: 3px solid #38a522;
+  box-shadow: 0 0 30px rgba(56, 165, 34, 0.4),
+    inset 0 0 20px rgba(56, 165, 34, 0.1);
   position: relative;
   transition: all 0.3s ease;
 }
@@ -116,7 +116,7 @@ body {
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, #dc143c, #8b0000, #dc143c);
+  background: linear-gradient(45deg, #38a522, #006400, #38a522);
   z-index: -1;
   filter: blur(10px);
   opacity: 0;
@@ -129,8 +129,8 @@ body {
 
 .about-us-content-spskerala:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 40px rgba(220, 20, 60, 0.6),
-    inset 0 0 30px rgba(220, 20, 60, 0.15);
+  box-shadow: 0 0 40px rgba(56, 165, 34, 0.6),
+    inset 0 0 30px rgba(56, 165, 34, 0.15);
 }
 
 /* About Us Logo */
@@ -149,12 +149,12 @@ body {
   max-height: 350px;
   aspect-ratio: 1 / 1;
   object-fit: contain;
-  filter: drop-shadow(0 0 20px rgba(220, 20, 60, 0.4));
+  filter: drop-shadow(0 0 20px rgba(56, 165, 34, 0.4));
   transition: all 0.3s ease;
 }
 
 .about-us-logo-spskerala img:hover {
-  filter: drop-shadow(0 0 30px rgba(220, 20, 60, 0.7));
+  filter: drop-shadow(0 0 30px rgba(56, 165, 34, 0.7));
   transform: scale(1.05);
 }
 
