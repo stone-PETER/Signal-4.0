@@ -4,12 +4,61 @@
   text-align: center;
   position: relative;
   background-color: #0a0a1a;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(56, 165, 34, 0.03) 2px,
+      rgba(56, 165, 34, 0.03) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(56, 165, 34, 0.03) 2px,
+      rgba(56, 165, 34, 0.03) 4px
+    );
   font-family: "Inter", sans-serif;
   padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.workshops-container::before {
+  content: "WORKSHOPS";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  font-size: 15rem;
+  font-weight: 900;
+  color: rgba(56, 165, 34, 0.03);
+  font-family: "Impact", "Bebas Neue", sans-serif;
+  letter-spacing: 10px;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .wave-container {
   position: relative;
+  z-index: 1;
+}
+
+.wave-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 0, 0.2) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .workshops {
@@ -27,13 +76,30 @@
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  color: #32cd32;
+  color: #ffd700;
   margin-top: 20px;
-  font-size: 3em;
+  font-size: 4em;
   font-weight: 900;
-  letter-spacing: 4px;
-  text-shadow: 0 0 15px rgba(50, 205, 50, 0.8);
-  font-family: "Bebas Neue", cursive;
+  letter-spacing: 8px;
+  text-shadow: 4px 4px 0px #000000, 8px 8px 0px #ff4500,
+    12px 12px 0px rgba(255, 69, 0, 0.5), 0 0 30px rgba(255, 215, 0, 0.8);
+  font-family: "Impact", "Bebas Neue", cursive;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px #000000;
+  paint-order: stroke fill;
+  animation: heroGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+  0% {
+    text-shadow: 4px 4px 0px #000000, 8px 8px 0px #ff4500,
+      12px 12px 0px rgba(255, 69, 0, 0.5), 0 0 30px rgba(255, 215, 0, 0.8);
+  }
+  100% {
+    text-shadow: 4px 4px 0px #000000, 8px 8px 0px #ff4500,
+      12px 12px 0px rgba(255, 69, 0, 0.5), 0 0 50px rgba(255, 215, 0, 1),
+      0 0 70px rgba(255, 69, 0, 0.5);
+  }
 }
 
 .workshop-card {
@@ -41,14 +107,77 @@
   height: 400px;
   margin: 20px;
   perspective: 1000px;
-  border: 2px solid #32cd32;
-  box-shadow: 0 0 15px rgba(50, 205, 50, 0.5);
-  transition: all 0.6s ease;
+  border: 6px solid #000000;
+  box-shadow: 8px 8px 0px #ffd700, 8px 8px 0px 6px #000000,
+    inset 0 0 0 4px #ffffff;
+  transition: all 0.4s ease;
   position: relative;
+  background: #ffffff;
+  background-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.1) 1px,
+      transparent 1px
+    ),
+    radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 2px;
+  clip-path: polygon(
+    0% 8px,
+    8px 8px,
+    8px 0%,
+    calc(100% - 8px) 0%,
+    calc(100% - 8px) 8px,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    8px calc(100% - 8px),
+    0% calc(100% - 8px)
+  );
+}
+
+.workshop-card::before {
+  content: "POW!";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 70px;
+  height: 70px;
+  background: #ff4500;
+  border: 4px solid #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px #000000;
+  font-family: "Impact", sans-serif;
+  z-index: 10;
+  transform: rotate(15deg);
+  box-shadow: 3px 3px 0px #000000;
 }
 
 .workshop-card:hover {
-  box-shadow: 0 0 25px rgba(50, 205, 50, 0.8);
+  box-shadow: 12px 12px 0px #ffd700, 12px 12px 0px 6px #000000,
+    inset 0 0 0 4px #ffffff, 0 0 40px rgba(255, 215, 0, 0.6);
+  transform: translateY(-8px) rotate(-2deg);
+}
+
+.workshop-card:hover::before {
+  animation: comicBurst 0.6s ease infinite;
+}
+
+@keyframes comicBurst {
+  0%,
+  100% {
+    transform: rotate(15deg) scale(1);
+  }
+  50% {
+    transform: rotate(15deg) scale(1.15);
+  }
 }
 
 .workshop-card-inner {
@@ -64,12 +193,21 @@
 }
 
 .workshopName {
-  font-size: 1.5em;
-  font-family: "Bebas Neue", cursive;
+  font-size: 1.8em;
+  font-family: "Impact", "Bebas Neue", cursive;
   font-weight: 900;
-  letter-spacing: 2px;
-  color: #32cd32;
-  text-shadow: 0 0 10px rgba(50, 205, 50, 0.6);
+  letter-spacing: 3px;
+  color: #000000;
+  text-shadow: 3px 3px 0px #ff4500, 6px 6px 0px rgba(255, 69, 0, 0.4);
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #000000;
+  paint-order: stroke fill;
+  z-index: 1;
+  position: relative;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
 .workshop-card-front {
@@ -80,7 +218,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #001f3f 0%, #0a0a1a 100%);
+  background: #ffffff;
+  background-image: linear-gradient(
+      45deg,
+      transparent 48%,
+      rgba(255, 215, 0, 0.1) 49%,
+      rgba(255, 215, 0, 0.1) 51%,
+      transparent 52%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 48%,
+      rgba(255, 215, 0, 0.1) 49%,
+      rgba(255, 215, 0, 0.1) 51%,
+      transparent 52%
+    );
+  background-size: 20px 20px;
+  border: 3px solid #000000;
+  position: relative;
+}
+
+.workshop-card-front::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 69, 0, 0.15) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .workshop-card-back {
@@ -90,36 +262,64 @@
   backface-visibility: hidden;
   display: flex;
   align-items: center;
-  background: linear-gradient(145deg, #0d0d0d 0%, #1a1a1a 100%);
-  color: #c0c0c0;
+  background: #fffacd;
+  background-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.08) 1px,
+      transparent 1px
+    ),
+    radial-gradient(circle, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 2px;
+  color: #000000;
   display: flex;
   flex-direction: column;
   transform: rotateY(180deg);
   padding: 20px;
-}
-
-.workshop-card:hover {
-  border: 3px solid #ff4757;
-  box-shadow: 0 0 30px rgba(220, 20, 60, 0.6), 0 0 50px rgba(220, 20, 60, 0.3);
-  transform: translateY(-10px);
+  border: 3px solid #000000;
 }
 
 .workshop-topic {
   font-size: 1.5em;
   font-weight: 900;
-  color: #dc143c;
+  color: #000000;
   margin-top: 20px;
-  font-family: "Bebas Neue", cursive;
-  letter-spacing: 2px;
-  text-shadow: 0 0 15px rgba(220, 20, 60, 0.6);
+  font-family: "Impact", "Bebas Neue", cursive;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 0px #ffd700, 4px 4px 0px rgba(255, 215, 0, 0.4);
+  text-transform: uppercase;
+  background: #ff4500;
+  padding: 10px 20px;
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #000000;
 }
 
 .workshop-description {
   font-size: 0.95em;
-  font-weight: 300;
-  color: #c0c0c0;
+  font-weight: 600;
+  color: #000000;
   line-height: 1.8;
-  margin: 0;
+  margin: 15px 0 0 0;
+  text-align: justify;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 3px solid #000000;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.workshop-description::before {
+  content: '"';
+  font-size: 3rem;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  color: #ff4500;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .wavegif {
@@ -131,20 +331,70 @@
   background-repeat: no-repeat;
   animation: gifAnimation 5s infinite;
   filter: hue-rotate(180deg) saturate(2) brightness(0.6);
+  position: relative;
+  margin-top: 60px;
+}
+
+/* Superhero comic style for coming soon message */
+.workshops-container .text-white {
+  background: #ffd700 !important;
+  border: 5px solid #000000 !important;
+  color: #000000 !important;
+  font-family: "Impact", "Bebas Neue", sans-serif !important;
+  text-transform: uppercase !important;
+  font-size: 1.5rem !important;
+  letter-spacing: 3px !important;
+  text-shadow: 3px 3px 0px #ff4500, 6px 6px 0px rgba(255, 69, 0, 0.4) !important;
+  box-shadow: 8px 8px 0px #ff4500, 8px 8px 0px 5px #000000 !important;
+  padding: 30px 50px !important;
+  position: relative;
+  z-index: 2;
+  -webkit-text-stroke: 1px #000000;
+}
+
+.workshops-container .text-white::before {
+  content: "⚡";
+  position: absolute;
+  top: -25px;
+  left: 20px;
+  font-size: 3rem;
+  animation: lightningPulse 1.5s ease-in-out infinite;
+}
+
+.workshops-container .text-white::after {
+  content: "⚡";
+  position: absolute;
+  top: -25px;
+  right: 20px;
+  font-size: 3rem;
+  animation: lightningPulse 1.5s ease-in-out infinite 0.75s;
+}
+
+@keyframes lightningPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
 }
 
 .loader {
   transform: rotateZ(45deg);
   perspective: 1000px;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  color: #dc143c;
+  width: 56px;
+  height: 56px;
+  color: #ffd700;
   position: absolute;
-  top: 102px;
+  top: 110px;
   font-style: italic;
   left: 50%;
   transform: translateX(-50%);
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
 }
 
 .loader:before,
@@ -162,7 +412,7 @@
 }
 
 .loader:after {
-  color: #8b0000;
+  color: #ff4500;
   transform: rotateY(70deg);
   animation-delay: 0.4s;
 }
