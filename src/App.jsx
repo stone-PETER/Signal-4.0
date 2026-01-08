@@ -27,6 +27,25 @@ const App = () => {
                 <Hero />
                 {/* <Countdown/> */}
                 <AboutUs />
+                {/* <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "40px 20px",
+                    backgroundColor: "#0a0a1a",
+                  }}
+                >
+                  <img
+                    src="/9172242_12614.svg"
+                    alt="Decorative"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                      maxHeight: "400px",
+                    }}
+                  />
+                </div> */}
                 {/* <Registration /> */}
                 {/* <Speaker /> */}
                 {/* <Updates/> */}
