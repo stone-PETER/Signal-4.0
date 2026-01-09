@@ -1,5 +1,5 @@
 import React from "react";
-import wave from "../../assets/green wave 3.jpg";
+import wave from "../../../public/comicBG - Copy.jpg";
 
 import "./Workshops.css"; 
 const workshopsData = [
@@ -74,9 +74,9 @@ const Workshops = () => {
           <p className="text-lg font-semibold text-center">Will be disclosed soon</p>
         </div>
       </div>
-      <div className="wavegif">
+      {/* <div className="wavegif">
 
-      </div>
+      </div> */}
     </div>
   );
 };

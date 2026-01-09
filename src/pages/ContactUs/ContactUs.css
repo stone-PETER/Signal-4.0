@@ -147,8 +147,8 @@
   text-transform: uppercase;
   letter-spacing: 6px;
   text-shadow: 4px 4px 0px #ffd700, 8px 8px 0px rgba(255, 215, 0, 0.5);
-  -webkit-text-stroke: 2px #000000;
-  paint-order: stroke fill;
+  /* -webkit-text-stroke: 2px #000000;
+  paint-order: stroke fill; */
   position: relative;
   padding-top: 20px;
 }
