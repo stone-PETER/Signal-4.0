@@ -4,17 +4,34 @@
   left: 0;
   width: 100dvw;
   height: 10dvh;
-  background: rgb(30 27 75 / var(--tw-bg-opacity, 1));
+  background: #ffd700;
+  background-image: linear-gradient(
+      45deg,
+      transparent 48%,
+      rgba(0, 0, 0, 0.05) 49%,
+      rgba(0, 0, 0, 0.05) 51%,
+      transparent 52%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 48%,
+      rgba(0, 0, 0, 0.05) 49%,
+      rgba(0, 0, 0, 0.05) 51%,
+      transparent 52%
+    );
+  background-size: 15px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 50;
   padding: 0 20px;
+  border-bottom: 6px solid #000000;
+  box-shadow: 0 6px 0px #ff4500, 0 6px 0px 6px #000000;
 }
 .navBar {
   width: 30%;
   height: 100%;
-  background: rgb(30 27 75 / var(--tw-bg-opacity, 1));
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,6 +46,17 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.navbar .logo img {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  transition: all 0.3s ease;
+}
+
+.navbar .logo img:hover {
+  filter: drop-shadow(0 0 15px rgba(255, 69, 0, 0.8));
+  transform: scale(1.05);
 }
 .nav-bar {
   display: flex;
@@ -37,34 +65,69 @@
   align-items: center;
   justify-content: space-between;
   padding-right: 10%;
+  gap: 10px;
 }
 .nav-bar li {
-  color: rgb(6, 212, 71);
+  color: #000000;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   transition: all 0.3s ease-in-out;
+  font-family: "Impact", "Bebas Neue", sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  padding: 8px 15px;
+  background: transparent;
+  border: 3px solid transparent;
+  position: relative;
 }
+
+.nav-bar li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: #ff4500;
+  transition: width 0.3s ease;
+}
+
 .nav-bar li:hover {
-  color: #ffa800;
-  text-shadow: 0px 0px 10px #ffa800;
-  -webkit-text-stroke-width: 0.20000000298023224;
-  -webkit-text-stroke-color: #ffa800;
+  color: #ff4500;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.nav-bar li:hover::before {
+  width: 100%;
+}
+
+.nav-bar li a {
+  position: relative;
+  z-index: 1;
 }
 /* mobile view */
 .bars {
   display: none;
-  color: white;
-  border: 2px #ffa800 solid;
-  border-radius: 5px;
+  color: #000000;
+  border: 4px solid #000000;
+  border-radius: 0;
   padding: 4px;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
+  background: #ff4500;
+  box-shadow: 3px 3px 0px #000000;
+  transition: all 0.3s ease;
 }
 .bars:hover {
-  box-shadow: 0px 0px 10px #ffa800;
+  box-shadow: 5px 5px 0px #000000;
+  transform: translateY(-2px);
+  background: #ffd700;
 }
 
 @media screen and (max-width: 991px) {
@@ -81,10 +144,23 @@
     height: 35dvh;
     width: 100%;
     flex-direction: column;
-    background: #001d3e;
+    background: #ffffff;
+    background-image: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0.08) 1px,
+        transparent 1px
+      ),
+      radial-gradient(circle, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+    background-size: 4px 4px;
+    background-position: 0 0, 2px 2px;
+    border-bottom: 6px solid #000000;
+    border-left: 6px solid #000000;
+    border-right: 6px solid #000000;
+    box-shadow: 0 6px 0px rgba(0, 0, 0, 0.3);
     z-index: -1;
     opacity: 0;
     transition: all 0.3s linear;
+    gap: 0;
   }
   .nav-bar-active {
     top: 10dvh;
@@ -94,11 +170,23 @@
   .nav-bar li {
     width: 100%;
     height: 100%;
-    border-top: 0.5px #ffa800 solid;
-    border-bottom: 0.5px #ffa800 solid;
-    font-size: 14px;
-    font-weight: 800;
+    border-top: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+    font-size: 16px;
+    font-weight: 900;
+    background: #fffacd;
+    transition: all 0.3s ease;
   }
+
+  .nav-bar li:hover {
+    background: #ffd700;
+    transform: translateX(10px);
+  }
+
+  .nav-bar li::before {
+    display: none;
+  }
+
   .bars {
     display: block;
   }

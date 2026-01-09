@@ -1,11 +1,27 @@
 /* Footer.css */
 
 footer {
-  background-color: #172238;
+  background-color: #0a0a1a;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(255, 215, 0, 0.03) 3px,
+      rgba(255, 215, 0, 0.03) 6px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(255, 215, 0, 0.03) 3px,
+      rgba(255, 215, 0, 0.03) 6px
+    );
   color: #fff;
   flex-direction: column;
   align-items: center;
   position: relative;
+  border-top: 6px solid #ffd700;
+  box-shadow: 0 -6px 0px #000000;
 }
 .feet {
   display: flex;
@@ -34,14 +50,17 @@ footer {
   min-width: 200px;
 }
 .useful-links h4 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 900;
-  color: #00d4ff;
+  color: #ffd700;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
-  border-bottom: 2px solid #00d4ff;
-  letter-spacing: 2px;
+  border-bottom: 4px solid #ff4500;
+  letter-spacing: 3px;
+  font-family: "Impact", "Bebas Neue", sans-serif;
+  text-shadow: 2px 2px 0px #000000;
+  -webkit-text-stroke: 0.5px #000000;
 }
 .useful-links ul {
   padding-top: 12px;
@@ -61,15 +80,16 @@ footer {
 }
 
 .useful-links ul li a:hover {
-  color: #00d4ff;
+  color: #ffd700;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 .useful-links ul li:hover {
-  border: 2px solid #00d4ff;
-  border-radius: 5px;
-  background-color: rgba(0, 212, 255, 0.15);
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
-  transform: translateX(5px);
+  border: 3px solid #ffd700;
+  border-radius: 0;
+  background-color: rgba(255, 215, 0, 0.2);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+  transform: translateX(8px);
   transition: all 0.3s ease;
 }
 
@@ -77,15 +97,17 @@ footer {
   padding: 20px;
 }
 .footer-contact h4 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 900;
-  color: #00d4ff;
+  color: #ffd700;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
-  border-bottom: 2px solid #00d4ff;
-  text-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
-  letter-spacing: 2px;
+  border-bottom: 4px solid #ff4500;
+  text-shadow: 2px 2px 0px #000000;
+  letter-spacing: 3px;
+  font-family: "Impact", "Bebas Neue", sans-serif;
+  -webkit-text-stroke: 0.5px #000000;
 }
 .footer-contact p {
   padding-top: 12px;

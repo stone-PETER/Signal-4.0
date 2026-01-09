@@ -4,9 +4,40 @@
 /* General styles for the component */
 .speakers-section {
   background-color: #0a0a1a;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(255, 69, 0, 0.03) 3px,
+      rgba(255, 69, 0, 0.03) 6px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(255, 69, 0, 0.03) 3px,
+      rgba(255, 69, 0, 0.03) 6px
+    );
   color: white;
   padding: 60px 20px;
   font-family: "Inter", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.speakers-section::before {
+  content: "HEROES";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-12deg);
+  font-size: 15rem;
+  font-weight: 900;
+  color: rgba(255, 69, 0, 0.03);
+  font-family: "Impact", "Bebas Neue", sans-serif;
+  letter-spacing: 15px;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .wave-image {
@@ -16,13 +47,20 @@
 
 .speakers-heading {
   text-align: center;
-  color: #32cd32;
+  color: #ffd700;
   margin-top: 20px;
-  font-size: 3em;
+  font-size: 4em;
   font-weight: 900;
-  letter-spacing: 4px;
-  text-shadow: 0 0 15px rgba(50, 205, 50, 0.8);
-  font-family: "Bebas Neue", cursive;
+  letter-spacing: 8px;
+  text-shadow: 4px 4px 0px #000000, 8px 8px 0px #ff4500,
+    12px 12px 0px rgba(255, 69, 0, 0.5);
+  font-family: "Impact", "Bebas Neue", cursive;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px #000000;
+  paint-order: stroke fill;
+  animation: heroGlow 2s ease-in-out infinite alternate;
+  position: relative;
+  z-index: 1;
 }
 
 /* Container for speaker cards */
@@ -30,58 +68,161 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
   padding: 15px;
-  margin-top: 20px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
 }
 
 /* Individual speaker card styles */
 .speakers-card {
   text-align: center;
-  background: linear-gradient(135deg, #001f3f 0%, #0a0a1a 100%);
-  border: 2px solid #32cd32;
-  box-shadow: 0 0 15px rgba(50, 205, 50, 0.5);
-  border-radius: 8px;
-  overflow: hidden;
+  background: #ffffff;
+  background-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.08) 1px,
+      transparent 1px
+    ),
+    radial-gradient(circle, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 2px;
+  border: 6px solid #000000;
+  box-shadow: 10px 10px 0px #ff4500, 10px 10px 0px 6px #000000;
+  border-radius: 0;
+  overflow: visible;
   width: 350px;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   position: relative;
+  clip-path: polygon(
+    0% 8px,
+    8px 8px,
+    8px 0%,
+    calc(100% - 8px) 0%,
+    calc(100% - 8px) 8px,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    8px calc(100% - 8px),
+    0% calc(100% - 8px)
+  );
+}
+
+.speakers-card::before {
+  content: "HERO";
+  position: absolute;
+  top: -20px;
+  right: -25px;
+  background: #ffd700;
+  border: 4px solid #000000;
+  padding: 8px 20px;
+  font-family: "Impact", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #000000;
+  text-shadow: 2px 2px 0px rgba(255, 69, 0, 0.3);
+  transform: rotate(15deg);
+  box-shadow: 4px 4px 0px #000000;
+  z-index: 10;
+  -webkit-text-stroke: 1px #000000;
 }
 
 .speakers-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 25px rgba(50, 205, 50, 0.8);
+  transform: translateY(-10px) rotate(-2deg);
+  box-shadow: 15px 15px 0px #ff4500, 15px 15px 0px 6px #000000,
+    0 0 40px rgba(255, 69, 0, 0.6);
+}
+
+.speakers-card:hover::before {
+  animation: heroBadgePulse 0.6s ease infinite;
+}
+
+@keyframes heroBadgePulse {
+  0%,
+  100% {
+    transform: rotate(15deg) scale(1);
+  }
+  50% {
+    transform: rotate(15deg) scale(1.15);
+  }
 }
 
 /* Image container for speaker cards */
 .speaker-image-container {
   overflow: hidden;
-  border-bottom: 1px solid #333;
+  border-bottom: 5px solid #000000;
   height: 310px;
+  position: relative;
+  background: linear-gradient(
+      45deg,
+      transparent 48%,
+      rgba(255, 215, 0, 0.1) 49%,
+      rgba(255, 215, 0, 0.1) 51%,
+      transparent 52%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 48%,
+      rgba(255, 215, 0, 0.1) 49%,
+      rgba(255, 215, 0, 0.1) 51%,
+      transparent 52%
+    );
+  background-size: 20px 20px;
+}
+
+.speaker-image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
 .speaker-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1.5s ease;
+  transition: transform 0.5s ease;
+  filter: contrast(1.1) saturate(1.2);
 }
 
 .speaker-image:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
+  filter: contrast(1.2) saturate(1.3);
 }
 
 /* Text styles for speaker names and job titles */
 .speaker-name {
-  margin: 10px 0 5px;
-  font-size: 1.3em;
-  color: #fff;
+  margin: 15px 0 8px;
+  font-size: 1.5em;
+  color: #000000;
+  font-family: "Impact", "Bebas Neue", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0px #ffd700;
+  -webkit-text-stroke: 0.5px #000000;
 }
 
 .speaker-job {
-  margin: 0 0 10px;
-  font-size: 0.9em;
-  color: #aaa;
+  margin: 0 0 20px;
+  font-size: 1em;
+  color: #000000;
+  font-weight: 600;
+  padding: 10px 15px;
+  background: rgba(255, 215, 0, 0.3);
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
 }
 
 /* Media query for responsiveness */

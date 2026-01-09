@@ -1,11 +1,42 @@
 .contact {
   background-color: #0a0a1a;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 215, 0, 0.03) 2px,
+      rgba(255, 215, 0, 0.03) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 215, 0, 0.03) 2px,
+      rgba(255, 215, 0, 0.03) 4px
+    );
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   box-sizing: border-box;
   padding-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: "CONTACT";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  font-size: 12rem;
+  font-weight: 900;
+  color: rgba(255, 215, 0, 0.04);
+  font-family: "Impact", "Bebas Neue", sans-serif;
+  letter-spacing: 10px;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .contact-container {
@@ -14,10 +45,64 @@
   padding: 40px 15px;
   margin: auto;
   box-sizing: border-box;
-  background: rgba(30, 27, 75, 0.5);
-  border: 2px solid rgba(56, 165, 34, 0.5);
-  box-shadow: 0 0 20px rgba(56, 165, 34, 0.3);
-  border-radius: 8px;
+  background: #ffffff;
+  background-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.08) 1px,
+      transparent 1px
+    ),
+    radial-gradient(circle, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 2px;
+  border: 6px solid #000000;
+  box-shadow: -10px 10px 0px #ffd700, -10px 10px 0px 6px #000000,
+    inset 0 0 0 4px #ffffff, 0 0 40px rgba(255, 215, 0, 0.5);
+  border-radius: 0;
+  position: relative;
+  z-index: 1;
+  clip-path: polygon(
+    0% 8px,
+    8px 8px,
+    8px 0%,
+    calc(100% - 8px) 0%,
+    calc(100% - 8px) 8px,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    8px calc(100% - 8px),
+    0% calc(100% - 8px)
+  );
+}
+
+.contact-container::before {
+  content: "✉";
+  position: absolute;
+  top: -25px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  background: #ff4500;
+  border: 5px solid #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  box-shadow: 4px 4px 0px #000000;
+  z-index: 10;
+  animation: mailBounce 2s ease-in-out infinite;
+}
+
+@keyframes mailBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .row {
@@ -54,7 +139,31 @@
 
 .section-heading {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 3.5em;
+  font-weight: 900;
+  color: #000000;
+  font-family: "Impact", "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-shadow: 4px 4px 0px #ffd700, 8px 8px 0px rgba(255, 215, 0, 0.5);
+  -webkit-text-stroke: 2px #000000;
+  paint-order: stroke fill;
+  position: relative;
+  padding-top: 20px;
+}
+
+.section-heading::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 6px;
+  background: #ff4500;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
 }
 
 /* .contact.container.row{
@@ -70,77 +179,136 @@
 }
 
 .main_form .contactus {
-  border: 2px solid rgba(56, 165, 34, 0.3);
-  padding: 0 15px;
+  border: 4px solid #000000;
+  padding: 0 20px;
   margin-bottom: 25px;
   width: 100%;
   height: 71px;
-  background: rgba(30, 27, 75, 0.8);
-  color: white;
+  background: #fffacd;
+  color: #000000;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 600;
   transition: all 0.3s ease;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  font-family: "Inter", sans-serif;
+}
+
+.main_form .contactus::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 .main_form .contactus:focus {
-  border-color: #38a522;
-  box-shadow: 0 0 10px rgba(56, 165, 34, 0.5);
+  border-color: #ff4500;
+  box-shadow: 0 0 0 3px #ffd700, 6px 6px 0px rgba(0, 0, 0, 0.3);
   outline: none;
+  transform: translateY(-2px);
+  background: #ffffff;
 }
 
 .main_form .textarea {
-  border: 2px solid rgba(56, 165, 34, 0.3);
+  border: 4px solid #000000;
   margin-bottom: 25px;
   width: 100%;
-  background: rgba(30, 27, 75, 0.8);
-  color: white;
-  font-size: 18px;
-  font-weight: normal;
-  padding: 20px 15px;
+  background: #fffacd;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 20px;
   border-radius: 0;
   height: 150px;
   transition: all 0.3s ease;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  font-family: "Inter", sans-serif;
+  resize: vertical;
+}
+
+.main_form .textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 .main_form .textarea:focus {
-  border-color: #38a522;
-  box-shadow: 0 0 10px rgba(56, 165, 34, 0.5);
+  border-color: #ff4500;
+  box-shadow: 0 0 0 3px #ffd700, 6px 6px 0px rgba(0, 0, 0, 0.3);
   outline: none;
+  transform: translateY(-2px);
+  background: #ffffff;
 }
 
 .main_form .send_btn {
-  font-size: 17px;
+  font-size: 20px;
   transition: all 0.3s ease;
-  background: linear-gradient(135deg, #38a522 0%, #006400 100%);
+  background: #ffd700;
   text-transform: uppercase;
-  color: #fff;
+  color: #000000;
   padding: 25px 0px;
   max-width: 252px;
   width: 100%;
-  border: 2px solid #38a522;
-  box-shadow: 0 0 20px rgba(220, 20, 60, 0.4);
-  font-weight: 700;
-  letter-spacing: 2px;
+  border: 5px solid #000000;
+  box-shadow: 6px 6px 0px #ff4500, 6px 6px 0px 5px #000000;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-family: "Impact", "Bebas Neue", sans-serif;
+  cursor: pointer;
+  position: relative;
+  -webkit-text-stroke: 1px #000000;
+  paint-order: stroke fill;
+}
+
+.main_form .send_btn::before {
+  content: "➤";
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.main_form .send_btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transition: width 0.4s ease, height 0.4s ease;
 }
 
 .main_form .send_btn:hover {
-  background: linear-gradient(135deg, #00e676 0%, #38a522 100%);
-  box-shadow: 0 0 30px rgba(56, 165, 34, 0.6);
-  transform: translateY(-2px);
-  display: block;
-  margin-top: 10px !important;
-  font-weight: bold;
+  background: #ff4500;
+  color: #ffffff;
+  box-shadow: 10px 10px 0px #ffd700, 10px 10px 0px 5px #000000,
+    0 0 30px rgba(255, 215, 0, 0.8);
+  transform: translateY(-4px) scale(1.02);
+  -webkit-text-stroke: 1px #000000;
+  animation: buttonPulse 0.5s ease;
 }
 
-.main_form .send_btn:hover {
-  background-color: #f7f7f7;
-  transition: ease-in all 0.5s;
-  color: black;
+.main_form .send_btn:hover::after {
+  width: 300px;
+  height: 300px;
 }
 
-#request *::placeholder {
-  color: #888888;
-  opacity: 1;
+.main_form .send_btn:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 4px 4px 0px #ffd700, 4px 4px 0px 5px #000000;
+}
+
+@keyframes buttonPulse {
+  0%,
+  100% {
+    transform: translateY(-4px) scale(1.02);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.05);
+  }
 }
 
 #load,
@@ -148,21 +316,65 @@
 #error {
   display: none;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
+  font-size: 1.3em;
+  font-weight: 900;
+  font-family: "Impact", "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 20px;
+  border: 4px solid #000000;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
 #load {
   display: block;
+  background: #ffd700;
+  color: #000000;
+  -webkit-text-stroke: 1px #000000;
+  animation: loadingPulse 1.5s ease-in-out infinite;
+}
+
+#load::before {
+  content: "⏳ ";
+  font-size: 1.5em;
+}
+
+@keyframes loadingPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
 }
 
 #success {
   display: block;
-  color: #fecd6a;
+  background: #00ff00;
+  color: #000000;
+  -webkit-text-stroke: 1px #000000;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+#success::before {
+  content: "✓ ";
+  font-size: 1.5em;
 }
 
 #error {
   display: block;
-  color: red;
+  background: #ff0000;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #000000;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+#error::before {
+  content: "⚠ ";
+  font-size: 1.5em;
 }
 
 @media screen and (max-width: 450px) {
