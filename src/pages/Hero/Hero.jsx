@@ -5,6 +5,17 @@ const Hero = () => {
     <section className="bg-[#0a0a1a] text-white pt-[10dvh]">
       <div className="relative min-h-screen  overflow-hidden">
         {/*pt-[10dvh]*/}
+        {/* Black Panther Hero Background */}
+        <div
+          className="absolute inset-0 w-full h-full z-0"
+          style={{
+            backgroundImage: "url(/assets/superheroes/black-panther.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center 30%",
+            opacity: 0.35,
+            filter: "brightness(1.1) contrast(1.2)",
+          }}
+        ></div>
         <canvas
           id="waveCanvas"
           className="absolute inset-0 w-full h-full opacity-80 z-0"

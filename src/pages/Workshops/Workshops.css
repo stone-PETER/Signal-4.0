@@ -39,6 +39,34 @@
   pointer-events: none;
 }
 
+/* Spider-Man decoration */
+.workshops-container::after {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  left: 8%;
+  width: 200px;
+  height: 200px;
+  background-image: url("/assets/superheroes/spiderman-crouch.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 1;
+  animation: swing 4s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.05);
+  }
+}
+
 .wave-container {
   position: relative;
   z-index: 1;

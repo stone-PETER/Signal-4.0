@@ -46,9 +46,9 @@ const App = () => {
                     }}
                   />
                 </div> */}
-                {/* <Registration /> */}
-                {/* <Speaker /> */}
-                {/* <Updates/> */}
+                <Registration />
+                <Speaker />
+                <Updates/>
                 <Workshops />
                 <Contact />
                 <Footer />
