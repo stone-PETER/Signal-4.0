@@ -490,3 +490,72 @@
     box-shadow: 0.2em -0.2em 0 0 currentcolor;
   }
 }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .workshops-container::before {
+    font-size: 12rem;
+  }
+
+  .workshop-heading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .workshops-container {
+    padding: 40px 15px;
+  }
+
+  .workshops-container::before {
+    font-size: 8rem;
+  }
+
+  .workshops-container::after {
+    width: 150px;
+    height: 150px;
+    left: 5%;
+    bottom: 5%;
+  }
+
+  .workshop-heading {
+    font-size: 2.5rem;
+  }
+
+  .workshops {
+    gap: 20px;
+  }
+
+  .workshop-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .workshops-container::before {
+    font-size: 5rem;
+  }
+
+  .workshops-container::after {
+    width: 100px;
+    height: 100px;
+  }
+
+  .workshop-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .workshop-card {
+    max-width: 300px;
+  }
+
+  .workshop-title {
+    font-size: 1.3rem;
+  }
+
+  .workshop-description {
+    font-size: 0.9rem;
+  }
+}
