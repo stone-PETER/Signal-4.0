@@ -1,5 +1,5 @@
 import React from "react";
-import wave from "../../../public/comicBG - Copy.jpg";
+import wave from "/comicBG - Copy.jpg";
 
 import "./Workshops.css"; 
 const workshopsData = [
