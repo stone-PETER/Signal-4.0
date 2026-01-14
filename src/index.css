@@ -9,11 +9,12 @@
   --accent-color-rgb: 144, 238, 144; /* RGB values for rgba() usage */
   --primary-color: #1e90ff; /* Blue primary color (was orange #ff4500) */
   --primary-color-rgb: 30, 144, 255; /* RGB values for rgba() usage */
+  --bg-color: #fff8e7; /* Light cream off-white background */
 }
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #f9ffa0;
+  background-color: var(--bg-color);
   font-family: "Varela", serif;
   font-weight: 400;
   font-style: normal;
@@ -26,10 +27,11 @@ body {
   text-transform: uppercase;
   text-align: center;
   font-size: 2.5rem;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 900;
+  color: #000;
   padding-bottom: 15px;
   text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .great-vibes-regular {

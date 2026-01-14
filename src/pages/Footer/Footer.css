@@ -1,7 +1,7 @@
 /* Footer.css */
 
 footer {
-  background-color: #0a0a1a;
+  background-color: var(--bg-color);
   background-image: repeating-linear-gradient(
       0deg,
       transparent,

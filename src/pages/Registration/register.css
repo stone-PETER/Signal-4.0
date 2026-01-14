@@ -1,7 +1,7 @@
 #registration {
   position: relative;
   padding: 100px 0;
-  background-color: #0a0a1a;
+  background-color: var(--bg-color);
   background-size: auto 100%;
   color: white;
   min-height: 100vh;

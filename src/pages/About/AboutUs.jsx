@@ -22,7 +22,7 @@ const AboutUs = () => {
       <div className="about-us-content-spskerala ">
         <div className="about-us-logo-spskerala">
           {/* Replace the path with your logo file */}
-          <img src="sps kc png.png" alt="Logo" />
+          <img src="sps kc.png" alt="Logo" />
         </div>
         <div className="about-us-text-spskerala lg:pl-[10%]">
           <h1>SPS KERALA CHAPTER</h1>
