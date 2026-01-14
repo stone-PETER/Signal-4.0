@@ -9,7 +9,7 @@ const Hero = () => {
         <div
           className="absolute inset-0 w-full h-full z-0"
           style={{
-            backgroundImage: "url(/assets/superheroes/black-panther.jpg)",
+            // backgroundImage: "url(/assets/superheroes/black-panther.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center 30%",
             opacity: 0.35,

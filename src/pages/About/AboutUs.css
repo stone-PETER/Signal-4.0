@@ -1,9 +1,9 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto Condensed", Arial Narrow, sans-serif;
 }
 
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto Condensed", Arial Narrow, sans-serif;
 }
 
 /* Container for the entire AboutUs section */
@@ -172,7 +172,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 3px 3px 0px #38a522, 6px 6px 0px rgba(56, 165, 34, 0.3);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto Condensed", Arial Narrow, sans-serif;
   position: relative;
 }
 
@@ -265,7 +265,7 @@ body {
   font-weight: 900;
   color: #ffffff;
   text-shadow: 2px 2px 0px #000000;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto Condensed", Arial Narrow, sans-serif;
   z-index: 11;
   letter-spacing: 2px;
 }
@@ -336,7 +336,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 3px 3px 0px #ff4500, 6px 6px 0px rgba(255, 69, 0, 0.3);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto Condensed", Arial Narrow, sans-serif;
   position: relative;
 }
 
@@ -408,7 +408,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 2px 4px rgba(0, 0, 0, 0.8);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto Condensed", Arial Narrow, sans-serif;
 }
 
 .about-us-text-cepoonjar p {
@@ -446,7 +446,7 @@ body {
   padding: 0 10px;
   padding-bottom: 20px;
   text-shadow: 0 0 20px rgba(220, 20, 60, 0.8);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto Condensed", Arial Narrow, sans-serif;
   letter-spacing: 4px;
 }
 
