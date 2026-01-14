@@ -162,7 +162,8 @@
   font-family: "Impact", "Bebas Neue", sans-serif;
   text-transform: uppercase;
   letter-spacing: 6px;
-  text-shadow: 4px 4px 0px var(--accent-color), 8px 8px 0px rgba(var(--accent-color-rgb), 0.5);
+  text-shadow: 4px 4px 0px var(--accent-color),
+    8px 8px 0px rgba(var(--accent-color-rgb), 0.5);
   /* -webkit-text-stroke: 2px #000000;
   paint-order: stroke fill; */
   position: relative;

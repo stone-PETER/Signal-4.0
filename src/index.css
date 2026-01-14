@@ -7,7 +7,7 @@
 :root {
   --accent-color: #3fec3f; /* Light green accent color */
   --accent-color-rgb: 144, 238, 144; /* RGB values for rgba() usage */
-  --primary-color: #1E90FF; /* Blue primary color (was orange #ff4500) */
+  --primary-color: #1e90ff; /* Blue primary color (was orange #ff4500) */
   --primary-color-rgb: 30, 144, 255; /* RGB values for rgba() usage */
 }
 
