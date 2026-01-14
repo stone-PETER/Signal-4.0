@@ -9,7 +9,7 @@
   --accent-color-rgb: 144, 238, 144; /* RGB values for rgba() usage */
   --primary-color: #1e90ff; /* Blue primary color (was orange #ff4500) */
   --primary-color-rgb: 30, 144, 255; /* RGB values for rgba() usage */
-  --bg-color: #f5ffb1; /* Light cream off-white background */
+  --bg-color: #fbffde; /* Light cream off-white background */
 }
 
 body {
@@ -52,12 +52,27 @@ body {
 }
 
 .reg-btn-gradient {
-  background: rgb(0, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(197, 45, 209, 1) 100%
-  );
+  background: var(--accent-color);
+  border: 6px solid #000000;
+  box-shadow: 8px 8px 0px var(--primary-color), 8px 8px 0px 6px #000000;
+  transition: all 0.3s ease;
+}
+
+.reg-btn-gradient:hover {
+  transform: translateY(-5px);
+  box-shadow: 12px 12px 0px var(--primary-color), 12px 12px 0px 6px #000000;
+}
+
+.hero-btn {
+  background: var(--accent-color);
+  border: 6px solid #000000;
+  box-shadow: 8px 8px 0px var(--primary-color), 8px 8px 0px 6px #000000;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 12px 12px 0px var(--primary-color), 12px 12px 0px 6px #000000;
 }
 
 @font-face {

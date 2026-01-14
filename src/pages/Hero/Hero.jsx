@@ -49,7 +49,7 @@ const Hero = () => {
 
               <div className="flex items-center justify-center md:justify-start space-x-4 pt-6 ">
                 <a href="#about" target="_blank">
-                  <button className="group relative px-8 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-green-600 hover:from-cyan-600 hover:to-green-700 transition-all duration-300 flex items-center">
+                  <button className="hero-btn group relative px-8 py-3 rounded-full transition-all duration-300 flex items-center font-bold text-black">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -64,7 +64,6 @@ const Hero = () => {
                       <polyline points="22 4 12 14.01 9 11.01"></polyline>
                     </svg>
                     Learn More
-                    <div className="absolute inset-0 rounded-full border-2 border-cyan-300/50 animate-ping group-hover:opacity-0 transition-opacity"></div>
                   </button>
                 </a>
               </div>
