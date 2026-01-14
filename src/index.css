@@ -3,9 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme Colors - Edit these to change the accent color throughout the site */
+:root {
+  --accent-color: #3fec3f; /* Light green accent color */
+  --accent-color-rgb: 144, 238, 144; /* RGB values for rgba() usage */
+  --primary-color: #1E90FF; /* Blue primary color (was orange #ff4500) */
+  --primary-color-rgb: 30, 144, 255; /* RGB values for rgba() usage */
+}
+
 body {
   font-family: "Inter", sans-serif;
-  background-color: #0a0a1a;
+  background-color: #f9ffa0;
   font-family: "Varela", serif;
   font-weight: 400;
   font-style: normal;

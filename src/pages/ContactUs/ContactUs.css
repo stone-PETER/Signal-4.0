@@ -71,7 +71,7 @@
   background-size: 4px 4px;
   background-position: 0 0, 2px 2px;
   border: 6px solid #000000;
-  box-shadow: -10px 10px 0px #ffd700, -10px 10px 0px 6px #000000,
+  box-shadow: -10px 10px 0px var(--accent-color), -10px 10px 0px 6px #000000,
     inset 0 0 0 4px #ffffff, 0 0 40px rgba(255, 215, 0, 0.5);
   border-radius: 0;
   position: relative;
@@ -99,7 +99,7 @@
   right: 30px;
   width: 80px;
   height: 80px;
-  background: #ff4500;
+  background: var(--primary-color);
   border: 5px solid #000000;
   border-radius: 50%;
   display: flex;
@@ -162,7 +162,7 @@
   font-family: "Impact", "Bebas Neue", sans-serif;
   text-transform: uppercase;
   letter-spacing: 6px;
-  text-shadow: 4px 4px 0px #ffd700, 8px 8px 0px rgba(255, 215, 0, 0.5);
+  text-shadow: 4px 4px 0px var(--accent-color), 8px 8px 0px rgba(var(--accent-color-rgb), 0.5);
   /* -webkit-text-stroke: 2px #000000;
   paint-order: stroke fill; */
   position: relative;
@@ -177,7 +177,7 @@
   transform: translateX(-50%);
   width: 200px;
   height: 6px;
-  background: #ff4500;
+  background: var(--primary-color);
   border: 2px solid #000000;
   box-shadow: 3px 3px 0px #000000;
 }
@@ -218,8 +218,8 @@
 }
 
 .main_form .contactus:focus {
-  border-color: #ff4500;
-  box-shadow: 0 0 0 3px #ffd700, 6px 6px 0px rgba(0, 0, 0, 0.3);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--accent-color), 6px 6px 0px rgba(0, 0, 0, 0.3);
   outline: none;
   transform: translateY(-2px);
   background: #ffffff;
@@ -251,8 +251,8 @@
 }
 
 .main_form .textarea:focus {
-  border-color: #ff4500;
-  box-shadow: 0 0 0 3px #ffd700, 6px 6px 0px rgba(0, 0, 0, 0.3);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--accent-color), 6px 6px 0px rgba(0, 0, 0, 0.3);
   outline: none;
   transform: translateY(-2px);
   background: #ffffff;
@@ -261,14 +261,14 @@
 .main_form .send_btn {
   font-size: 20px;
   transition: all 0.3s ease;
-  background: #ffd700;
+  background: var(--accent-color);
   text-transform: uppercase;
   color: #000000;
   padding: 25px 0px;
   max-width: 252px;
   width: 100%;
   border: 5px solid #000000;
-  box-shadow: 6px 6px 0px #ff4500, 6px 6px 0px 5px #000000;
+  box-shadow: 6px 6px 0px var(--primary-color), 6px 6px 0px 5px #000000;
   font-weight: 900;
   letter-spacing: 3px;
   font-family: "Impact", "Bebas Neue", sans-serif;
@@ -298,9 +298,9 @@
 }
 
 .main_form .send_btn:hover {
-  background: #ff4500;
+  background: var(--primary-color);
   color: #ffffff;
-  box-shadow: 10px 10px 0px #ffd700, 10px 10px 0px 5px #000000,
+  box-shadow: 10px 10px 0px var(--accent-color), 10px 10px 0px 5px #000000,
     0 0 30px rgba(255, 215, 0, 0.8);
   transform: translateY(-4px) scale(1.02);
   -webkit-text-stroke: 1px #000000;
@@ -314,7 +314,7 @@
 
 .main_form .send_btn:active {
   transform: translateY(-1px) scale(0.98);
-  box-shadow: 4px 4px 0px #ffd700, 4px 4px 0px 5px #000000;
+  box-shadow: 4px 4px 0px var(--accent-color), 4px 4px 0px 5px #000000;
 }
 
 @keyframes buttonPulse {
@@ -346,7 +346,7 @@
 
 #load {
   display: block;
-  background: #ffd700;
+  background: var(--accent-color);
   color: #000000;
   -webkit-text-stroke: 1px #000000;
   animation: loadingPulse 1.5s ease-in-out infinite;

@@ -46,11 +46,11 @@ const ComicBubble = ({ x, y, word, rotation }) => {
           <radialGradient id="comicGradient" cx="50%" cy="50%" r="50%">
             <stop
               offset="0%"
-              style={{ stopColor: "#FFD700", stopOpacity: 1 }}
+              style={{ stopColor: "var(--accent-color)", stopOpacity: 1 }}
             />
             <stop
               offset="100%"
-              style={{ stopColor: "#FF4500", stopOpacity: 1 }}
+              style={{ stopColor: "var(--primary-color)", stopOpacity: 1 }}
             />
           </radialGradient>
         </defs>

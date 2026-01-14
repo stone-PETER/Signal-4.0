@@ -4,7 +4,7 @@
   left: 0;
   width: 100dvw;
   height: 10dvh;
-  background: #ffd700;
+  background: var(--accent-color);
   background-image: linear-gradient(
       45deg,
       transparent 48%,
@@ -26,7 +26,7 @@
   z-index: 50;
   padding: 0 20px;
   border-bottom: 6px solid #000000;
-  box-shadow: 0 6px 0px #ff4500, 0 6px 0px 6px #000000;
+  box-shadow: 0 6px 0px var(--primary-color), 0 6px 0px 6px #000000;
 }
 .navBar {
   width: 30%;
@@ -93,12 +93,12 @@
   transform: translateX(-50%);
   width: 0;
   height: 3px;
-  background: #ff4500;
+  background: var(--primary-color);
   transition: width 0.3s ease;
 }
 
 .nav-bar li:hover {
-  color: #ff4500;
+  color: var(--primary-color);
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
@@ -120,14 +120,14 @@
   padding: 4px;
   width: 40px;
   height: 40px;
-  background: #ff4500;
+  background: var(--primary-color);
   box-shadow: 3px 3px 0px #000000;
   transition: all 0.3s ease;
 }
 .bars:hover {
   box-shadow: 5px 5px 0px #000000;
   transform: translateY(-2px);
-  background: #ffd700;
+  background: var(--accent-color);
 }
 
 @media screen and (max-width: 991px) {
@@ -179,7 +179,7 @@
   }
 
   .nav-bar li:hover {
-    background: #ffd700;
+    background: var(--accent-color);
     transform: translateX(10px);
   }
 

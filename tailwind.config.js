@@ -26,6 +26,8 @@ export default {
         black: "#000000",
         p1: "#B292FF",
         p2: "#3B0F40",
+        accent: "#90EE90",
+        primary: "#1E90FF",
       },
     },
     fontFamily: {
