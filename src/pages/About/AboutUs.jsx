@@ -24,7 +24,7 @@ const AboutUs = () => {
           {/* Replace the path with your logo file */}
           <img src="sps kc.png" alt="Logo" />
         </div>
-        <div className="about-us-text-spskerala lg:pl-[10%]">
+        <div className="about-us-text-spskerala">
           <h1>SPS KERALA CHAPTER</h1>
           <p>
 The IEEE Signal Processing Society (SPS) Kerala Chapter is a thriving, close-knit group that has been named Best Chapter of the Year on a global scale. Our team, led by 23 motivated student leaders and 17 professionals, including three VOLT grads, thrives with the support of a devoted advisory board. We plan meaningful activities, encourage collaboration among Kerala's expanding SPS student clubs, and recognize accomplishments such as winning ICIP and ICASSP video competitions. With members now helping to arrange ICASSP 2025, our influence has expanded well beyond the region. Together with other IEEE chapters, we're creating a worldwide network based on local enthusiasm. More than just a chapter, we're a family where ideas thrive and every effort counts.          </p>

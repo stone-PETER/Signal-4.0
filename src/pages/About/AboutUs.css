@@ -10,7 +10,7 @@ body {
 .about-us-container {
   position: relative;
   color: white;
-  padding: 40px 20px;
+  padding: 40px 10vw;
   background-color: var(--bg-color);
   min-height: 100vh;
 }
@@ -38,20 +38,7 @@ body {
     inset 0 0 0 4px #ffffff;
   position: relative;
   transition: all 0.3s ease;
-  clip-path: polygon(
-    0% 5px,
-    5px 5px,
-    5px 0%,
-    calc(100% - 5px) 0%,
-    calc(100% - 5px) 5px,
-    100% 5px,
-    100% calc(100% - 5px),
-    calc(100% - 5px) calc(100% - 5px),
-    calc(100% - 5px) 100%,
-    5px 100%,
-    5px calc(100% - 5px),
-    0% calc(100% - 5px)
-  );
+  overflow: visible;
 }
 
 .about-us-content:hover {
@@ -226,7 +213,7 @@ body {
     inset 0 0 0 4px #ffffff;
   position: relative;
   transition: all 0.3s ease;
-  clip-path: polygon(
+  /* clip-path: polygon(
     0% 5px,
     5px 5px,
     5px 0%,
@@ -239,7 +226,7 @@ body {
     5px 100%,
     5px calc(100% - 5px),
     0% calc(100% - 5px)
-  );
+  ); */
 }
 
 .about-us-content-spskerala::before {
@@ -441,7 +428,7 @@ body {
   color: #dc143c;
   font-size: 3.2rem;
   font-weight: 900;
-  overflow: hidden;
+  overflow: visible;
   z-index: 10;
   padding: 0 10px;
   padding-bottom: 20px;
