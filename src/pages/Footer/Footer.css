@@ -58,7 +58,7 @@ footer {
   padding-bottom: 12px;
   border-bottom: 4px solid #ff4500;
   letter-spacing: 3px;
-  font-family: "Impact", "Bebas Neue", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-shadow: 2px 2px 0px #000000;
   -webkit-text-stroke: 0.5px #000000;
 }
@@ -106,7 +106,7 @@ footer {
   border-bottom: 4px solid #ff4500;
   text-shadow: 2px 2px 0px #000000;
   letter-spacing: 3px;
-  font-family: "Impact", "Bebas Neue", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-text-stroke: 0.5px #000000;
 }
 .footer-contact p {

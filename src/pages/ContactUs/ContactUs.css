@@ -38,7 +38,7 @@
   font-size: 12rem;
   font-weight: 900;
   color: rgba(255, 215, 0, 0.04);
-  font-family: "Impact", "Bebas Neue", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 10px;
   z-index: 0;
   pointer-events: none;
@@ -207,7 +207,7 @@
   font-weight: 600;
   transition: all 0.3s ease;
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
-  font-family: "Inter", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .main_form .contactus::placeholder {
@@ -239,7 +239,7 @@
   height: 150px;
   transition: all 0.3s ease;
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
-  font-family: "Inter", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   resize: vertical;
 }
 
@@ -272,7 +272,7 @@
   box-shadow: 6px 6px 0px var(--primary-color), 6px 6px 0px 5px #000000;
   font-weight: 900;
   letter-spacing: 3px;
-  font-family: "Impact", "Bebas Neue", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
   position: relative;
   -webkit-text-stroke: 1px #000000;
@@ -336,7 +336,7 @@
   margin-top: 20px;
   font-size: 1.3em;
   font-weight: 900;
-  font-family: "Impact", "Bebas Neue", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 20px;

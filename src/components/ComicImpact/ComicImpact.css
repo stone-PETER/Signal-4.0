@@ -11,7 +11,7 @@
 
 /* Comic Text Styling */
 .comic-text {
-  font-family: "Impact", "Arial Black", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 900;
   fill: #000000;
